@@ -1,6 +1,5 @@
 // Task on Javascript
-// Solution: Mikhail Kolodin, 2019-03-29
-
+// Solution: Mikhail Kolodin, 2019-03-29 2019-04-01 1.1
 
 // Write a program that takes input of  integers N and M, followed by N more integers and then M more integers. For each of the last M numbers, the program outputs true, if that number was present in the array of N numbers, output False otherwise
 
@@ -21,23 +20,16 @@
 // Explanation: An input containing 8 integers is taken, the 1st integer is the value of N, 2nd number is the value of M, follwed by N integers + M integers. 23 outputs True, since 23 is present in N, 25 outputs false because it was not in N.
 
 
-val = '6 4 99 12 10 23 23 25 34 56 23 11'.split(' ')
+const val = '6 4 99 12 10 23 23 25 34 56 23 11'.split(' ')
 
 function line(value) {
 
-//	console.log (value);
-	
 	var N = parseInt(value[0]);
-//	console.log (N);
 	var M = parseInt(value[1]);
-//	console.log (M);
-	
-	for (i=2; i<2+N+M; i++){ // 1
-		value[i] = parseInt (value[i])
-	}
+//	for (i=2; i<2+N+M; i++){ // 1
+//		value[i] = parseInt (value[i])
+//	}
 
-//	console.log (value);
-	
 	for (i=2+N; i<2+N+M; i++){
 		v = value[i];
 		present = 0;
@@ -57,7 +49,7 @@ function line(value) {
 
 line(val)
 
-// 1. we might save numbers 2..2+N+M as strings, it changed nothing.
+// 1. we might convert strings to numbers 2..2+N+M as strings, it changed nothing.
 
 // 2. we might store many numbers in1 cell, up to 64, 
 //    make  a function to store the bit, 
